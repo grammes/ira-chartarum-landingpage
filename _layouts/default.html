@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/MainMenuBackground.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="twitter:image" content="{{ site.url }}/assets/images/MainMenuBackground.webp">
+    
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                </div>
+                <div class="nav-links">
+                    <a href="#mechanics" class="nav-link">Mechanics</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="http://downloads.ira-chartarum.com/IraUpdater.zip" class="btn btn-primary" target="_blank">Download</a>
+                    <a href="https://discord.gg/Ywz5UYpf" class="btn btn-secondary" target="_blank">Discord</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer section-dark">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>{{ site.title }}</h3>
+                    <p>{{ site.description }}</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/Ywz5UYpf" target="_blank">Discord Server</a></li>
+                        <li><a href="http://downloads.ira-chartarum.com/IraUpdater.zip" target="_blank">Download Game</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Development</h4>
+                    <p>Created by a passionate 4-person indie team</p>
+                    <p>© 2025 Ira Chartarum. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
