@@ -7,9 +7,9 @@ url: "https://www.ira-chartarum.com"
 twitter_username: 
 github_username: grammes
 
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 exclude:
   - .sass-cache/
