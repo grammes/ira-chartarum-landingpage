@@ -2,8 +2,9 @@ title: Ira Chartarum
 email: info@ira-chartarum.com
 description: >- 
   Trading cards meet tabletop. A complex strategic game for core gamers who love deep-diving into intricate mechanics.
-baseurl: "/ira-chartarum-landingpage"
-url: "https://www.ira-chartarum.com"
+#baseurl: "/ira-chartarum-landingpage"
+baseurl: ""
+url: "https://play.ira-chartarum.com"
 twitter_username: 
 github_username: grammes
 
