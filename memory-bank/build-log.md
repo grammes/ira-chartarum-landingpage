@@ -95,6 +95,42 @@
 
 ---
 
+## Update: Configuration and Build Improvements
+
+### Base URL Configuration Fixed
+**Problem**: CSS and images not loading correctly on GitHub Pages
+**Solution**: Updated `_config.yml` baseurl to `/ira-chartarum-landingpage`
+**Result**: CSS now loads properly, site styling functional
+
+### Image Path Resolution Fixed  
+**Problem**: All images showing broken links due to incorrect base paths
+**Actions Taken**:
+- Converted `assets/css/main.css` to `assets/css/main.scss` for Jekyll processing
+- Added Jekyll front matter to SCSS file
+- Updated all image references to use `{{ '/assets/images/...' | relative_url }}`
+- Fixed background image in CSS using Jekyll liquid syntax
+
+### Enhanced Build Process
+**New Gemfile Configuration**:
+- Ruby 3.4 specification
+- Jekyll 4.3 with proper dependencies
+- Added webrick for Ruby 3.x compatibility
+- jekyll-seo-tag plugin added
+
+**New GitHub Actions Workflow** (`jekyll.yml`):
+- Proper Jekyll build and deployment process
+- Ruby 3.4 setup with bundler caching
+- Automated GitHub Pages deployment
+- Replaced incompatible npm-based CI workflow
+
+**Technical Improvements**:
+- SCSS processing enables Jekyll variables in stylesheets
+- Proper relative URL handling for GitHub Pages subdirectory deployment
+- Enhanced SEO capabilities with jekyll-seo-tag
+- Professional CI/CD pipeline for Jekyll projects
+
+---
+
 ## Next Steps
 1. ✅ Complete - Site successfully deployed and accessible
 2. ⏸️ Deferred - Custom domain setup (www.ira-chartarum.com) 
