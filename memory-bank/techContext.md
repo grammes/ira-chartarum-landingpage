@@ -79,3 +79,5 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 2. **SCSS Processing**: Converting CSS to SCSS enables Jekyll liquid syntax for dynamic paths
 3. **Ruby Compatibility**: Ruby 3.x requires webrick gem for local development
 4. **GitHub Actions**: Jekyll-specific workflow required for proper build and deployment
+5. **SCSS Front Matter**: Jekyll SCSS files need exactly ONE front matter block (---) at the top - duplicate blocks cause GitHub Pages build failures
+6. **GitHub Pages Compatibility**: Remove theme dependencies (like minima) to avoid import conflicts in CI/CD
